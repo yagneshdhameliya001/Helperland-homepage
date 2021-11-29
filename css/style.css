@@ -148,36 +148,3 @@ h6{
         padding: 0!important;
     }
 }
-
-/* ============================= FAQs ============================= */
-
-#faqnav{
-    background-color: #757575;
-    padding: 0!important;
-    /* font-size: 0.7rem!important; */
-}
-
-#logo-faq{
-    height: 2.5rem;
-    margin-top: 0px;
-}
-
-.greenlink{
-    background-color:#29626D;
-}
-
-#banner{
-    width: 100%;
-}
-
-header hr{
-    display: inline-block;
-    width: 4rem;
-    height: 2px!important;
-    color: #CCCCCC!important;
-}
-
-.footerborder{
-    border-bottom: 1px solid #424242;
-}
-
