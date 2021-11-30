@@ -44,9 +44,11 @@ body, html {
   .circle-icon{
     height: 108px;
     width: 108px;
-    border: 2px solid red;
     border-radius: 50%;
-    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   /* Style tab links */
   .tablink {
