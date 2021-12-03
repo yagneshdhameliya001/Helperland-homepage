@@ -100,3 +100,66 @@ footer>.container a{
   left: 20px;
   font-size: 200%;
 }
+
+/* for contact page*/
+
+
+.touch_form .col{
+  max-width: 300px;
+  min-height: 46px;
+  margin: 7px;
+  padding: 0;
+}
+.form_areacode{
+  max-width: 57px;
+  background-color: #c8c8c8;
+}
+.input_f::placeholder , .placeholder{
+  color: #a0a0a0;
+}
+.input_f {
+  border: solid 1px #c8c8c8;  
+  padding-left: 16px;
+}
+.touch_form .textarea , .touch_form .form_select {
+  width: 614px;
+  padding: 0;
+  min-height: 46px;
+  margin: 7px 0px;
+}
+.select_f select{
+  height: 46px;
+  padding: 0 16px !important;
+  color: #a0a0a0;
+}
+.touch_form .textarea textarea{
+  min-height: 146px;
+  padding-left: 16px !important;
+  padding-top: 10px !important;
+}
+.submit_btn{
+  min-width: 163px;
+  min-height: 46px;
+  background-color: #1d7a8c !important;
+  border: none !important;
+  font-size: 20px;
+}
+.get-in-touch{
+  font-size: 28px;
+  color: #4f4f4f;
+  margin-bottom: 20px;
+}
+
+.map_marker{
+    position: absolute !important;
+    top: 11vw;
+    left: 45vw;
+}
+.container_map{
+    margin-top: 80px;
+}
+
+.map_image{
+  width: 100vw;
+  height: auto;
+}
