@@ -1,0 +1,61 @@
+.header{
+    background-color: #525252;
+    height: auto;
+}
+
+.vertical-line{
+    width: 1px;
+    height: 50px;
+    background-color: #e1e1e1;
+}
+
+nav a{
+    color: #ffffff!important;
+}
+
+nav a:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none!important;
+}
+
+.dropdown-item span{
+    color: #111111;
+}
+
+.wel-san
+{
+     width: 100%; 
+     height: 119px; 
+     background-color: #f9f9f9; 
+}
+.wel
+{
+    font-size: 30px;
+}
+.san
+{
+    font-weight: bold;
+    font-size: 30px;
+ }
+
+ footer>.container a{
+    color:#ffffff;
+    text-decoration: none;
+ }  
+
+ footer>.container a:hover{
+     color: cadetblue;
+ }
+
+ .tabs-menu ul li{border-bottom: 1px solid #ffffff; background-color: #1d7a8c; list-style: none; line-height: 53px; width: 262px;}
+ .tabs-menu ul li a{ text-decoration: none; color: #ffffff; font-size: 18px;}
+ .description-part{ max-width: 847px; width: 100%; }
+ .border-box{ border: 1px solid #e1e1e1; }
+ .table thead{ background-color: #e1e1e1; }
+.table thead tr th{ font-size: 16px; font-weight: bold; color: #646464; letter-spacing: normal; opacity: 1; height: 49px; vertical-align: top;}
+.table thead tr th .actions{ margin-left: 10px; }
+.table tbody tr td{ font-size: 16px; font-weight: normal; color: #646464; line-height: 26px; border-bottom: 1px solid #e1e1e1; justify-content: center; align-items: center; letter-spacing: normal; }
+.table tbody tr td .cancel{ text-decoration: none; color: #fff; background-color: #ff6b6b; border: 1px solid transparent; border-radius: 25px; height: 30px; width: 70px; display: block;}
