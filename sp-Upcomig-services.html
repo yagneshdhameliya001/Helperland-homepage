@@ -16,6 +16,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/5602f8a8c9.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -83,180 +99,237 @@
             </span>
         </div>
 
-        <div class="row">
-            <div class="col-lg-3 col-12 tabs-menu">
-                <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="ms-5">
+            <div class="row">
+                <div class="col-lg-3 col-12 tabs-menu">
+                    <nav class="navbar navbar-expand-lg navbar-light">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#upcomingServiceTabs" aria-controls="upcomingServiceTabs" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse text-light" id="upcomingServiceTabs">
-                        <ul class="nav tabs nav-pills flex-column text-xl-start">
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-D" data-bs-toggle="pill" data-bs-target="#tabs-Deshboard"
-                                    aria-controls="tabs-Deshboard" aria-selected="false">Dashboard</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-NSR" data-bs-toggle="pill"
-                                    data-bs-target="#tabs-NewServiceRequests" aria-controls="tabs-NewServiceRequests"
-                                    aria-selected="false">New Service Requests</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-US" data-bs-toggle="pill"
-                                    data-bs-target="#tabs-UpcomingServices" aria-controls="tabs-UpcomingServices"
-                                    aria-selected="false">Upcoming services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-SS" data-bs-toggle="pill"
-                                    data-bs-target="#tabs-ServiceSchedule" aria-controls="tabs-ServiceSchedule"
-                                    aria-selected="false">Service Schedule</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-SH" data-bs-toggle="pill"
-                                    data-bs-target="#tabs-ServiceHistory" aria-controls="tabs-ServiceHistory"
-                                    aria-selected="false">Service History</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-MR" data-bs-toggle="pill" data-bs-target="#tabs-MyRatings"
-                                    aria-controls="tabs-MyRatings" aria-selected="false">My Ratings</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="tabs-BC" data-bs-toggle="pill"
-                                    data-bs-target="#tabs-BlockCustomer" aria-controls="tabs-BlockCustomer"
-                                    aria-selected="false">Block Customer</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="col-lg-9 col-12">
-                <div class="tab-content description-part">
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-Deshboard" aria-labelledby="tabs-D">
-                        Deshboard
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-NewServiceRequests"
-                        aria-labelledby="tabs-NSR">
-                        New Service Requests
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-UpcomingServices"
-                        aria-labelledby="tabs-US">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Service ID</th>
-                                    <th>Service Date</th>
-                                    <th>Customer details</th>
-                                    <th>Distance</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="mb-3 mt-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">15 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr class="mb-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">10 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">15 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr class="mb-3 mt-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">15 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr class="mb-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">10 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">15 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr class="mb-3 mt-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">7 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr class="mb-3">
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">10 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                                <tr>
-                                    <td data-label="Service ID">323436</td>
-                                    <td data-label="Service date"><img class="me-2" src="img/calendar.png">09/04/2018
-                                        <br><img class="me-2" src="img/clock.png">12:00-18:00</td>
-                                    <td data-label="Customer details">David Bough<br> <img
-                                            src="img/home.png">Musterstrabe 5,12345 Bonn</td>
-                                    <td data-label="Distance">15 kms</td>
-                                    <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-ServiceSchedule"
-                        aria-labelledby="tabs-SS">
-                        Service
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-ServiceHistory"
-                        aria-labelledby="tabs-SH">
-                        History
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-MyRatings"
-                        aria-labelledby="tabs-MR">
-                        Ratings
-                    </div>
-                    <div class="tab-pane fade accordian-collapse collapse" id="tabs-BlockCustomer"
-                        aria-labelledby="tabs-BC">
-                        Block customer
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#upcomingServiceTabs" aria-controls="upcomingServiceTabs"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse text-light" id="upcomingServiceTabs">
+                            <ul class="nav tabs flex-column text-xl-start">
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-D" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-Deshboard" aria-controls="tabs-Deshboard"
+                                        aria-selected="false">Dashboard</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-NSR" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-NewServiceRequests"
+                                        aria-controls="tabs-NewServiceRequests" aria-selected="false">New Service
+                                        Requests</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-US" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-UpcomingServices" aria-controls="tabs-UpcomingServices"
+                                        aria-selected="false">Upcoming services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-SS" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-ServiceSchedule" aria-controls="tabs-ServiceSchedule"
+                                        aria-selected="false">Service Schedule</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-SH" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-ServiceHistory" aria-controls="tabs-ServiceHistory"
+                                        aria-selected="false">Service History</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-MR" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-MyRatings" aria-controls="tabs-MyRatings"
+                                        aria-selected="false">My Ratings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tabs-BC" data-bs-toggle="pill"
+                                        data-bs-target="#tabs-BlockCustomer" aria-controls="tabs-BlockCustomer"
+                                        aria-selected="false">Block Customer</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="tab-content description-part">
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-Deshboard"
+                            aria-labelledby="tabs-D">
+                            Deshboard
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-NewServiceRequests"
+                            aria-labelledby="tabs-NSR">
+                            New Service Requests
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-UpcomingServices"
+                            aria-labelledby="tabs-US">
+                            <table class="table" id="myTable">
+                                <thead>
+                                    <tr>
+                                        <th>Service ID</th>
+                                        <th>Service Date</th>
+                                        <th>Customer details</th>
+                                        <th>Distance</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="mb-3 mt-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mb-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">10 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mb-3 mt-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mb-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">10 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mb-3 mt-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">7 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr class="mb-3">
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">10 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Service ID">323436</td>
+                                        <td data-label="Service date"><img class="me-2"
+                                                src="img/calendar.png">09/04/2018
+                                            <br><img class="me-2" src="img/clock.png">12:00-18:00
+                                        </td>
+                                        <td data-label="Customer details">David Bough<br> <img
+                                                src="img/home.png">Musterstrabe 5,12345 Bonn</td>
+                                        <td data-label="Distance">15 kms</td>
+                                        <td data-label-1="Actions"><a href="#" class="cancel text-center">Cancel</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-ServiceSchedule"
+                            aria-labelledby="tabs-SS">
+                            Service
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-ServiceHistory"
+                            aria-labelledby="tabs-SH">
+                            History
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-MyRatings"
+                            aria-labelledby="tabs-MR">
+                            Ratings
+                        </div>
+                        <div class="tab-pane fade accordian-collapse collapse" id="tabs-BlockCustomer"
+                            aria-labelledby="tabs-BC">
+                            Block customer
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
 
     <!-- footer starts -->
@@ -298,6 +371,26 @@
         <!-- privacy policy ends -->
 
     </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable(
+                {
+                    "language": {
+                        "paginate": {
+                            next: '&#8594;', // or '→'
+                            previous: '&#8592;' // or '←'
+                        }
+                    },
+                    
+                    "dom": '<"top"i>rt<"bottom"flp><"clear">',
+                    searching: false,
+                    info: false,
+                    "lengthMenu": [[5, 25, 50, -1], [5, 10, 15, "All"]]
+                }
+            );
+        });
+    </script>
     <!-- footer ends -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
