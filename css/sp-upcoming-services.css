@@ -50,12 +50,65 @@ a{
      color: cadetblue;
  }
 
- .tabs-menu ul li{border-bottom: 1px solid #ffffff; background-color: #1d7a8c; list-style: none; line-height: 53px; width: 262px;}
- .tabs-menu ul li a{ text-decoration: none; color: #ffffff; font-size: 18px;}
- .description-part{ max-width: 847px; width: 100%; }
- .border-box{ border: 1px solid #e1e1e1; }
- .table thead{ background-color: #e1e1e1; }
-.table thead tr th{ font-size: 16px; font-weight: bold; color: #646464; letter-spacing: normal; opacity: 1; height: 49px; vertical-align: top;}
-.table thead tr th .actions{ margin-left: 10px; }
-.table tbody tr td{ font-size: 16px; font-weight: normal; color: #646464; line-height: 26px; border-bottom: 1px solid #e1e1e1; justify-content: center; align-items: center; letter-spacing: normal; }
-.table tbody tr td .cancel{ text-decoration: none; color: #fff; background-color: #ff6b6b; border: 1px solid transparent; border-radius: 25px; height: 30px; width: 70px; display: block;}
+ .tabs-menu ul li
+ {
+     border-bottom: 1px solid #ffffff; background-color: #1d7a8c; list-style: none; line-height: 53px; width: 262px;
+    }
+ .tabs-menu ul li a
+ {
+      text-decoration: none; color: #ffffff; font-size: 18px;
+    }
+ .description-part
+ {
+      max-width: 847px; width: 100%;
+     }
+ 
+ .table thead
+ { 
+     background-color: #e1e1e1;
+     }
+.table thead tr th
+{
+     font-size: 16px; font-weight: bold; color: #646464; letter-spacing: normal; opacity: 1; height: 49px; vertical-align: top;
+    }
+.table thead tr th .actions
+{
+     margin-left: 10px;
+     }
+.table tbody tr td
+{
+     font-size: 16px; font-weight: normal; color: #646464; line-height: 26px; border-bottom: 1px solid #e1e1e1; justify-content: center; align-items: center; letter-spacing: normal; 
+    }
+.table tbody tr td .cancel
+{
+     text-decoration: none; color: #fff; background-color: #ff6b6b; border: 1px solid transparent; border-radius: 25px; height: 30px; width: 70px; display: block;
+    }
+
+.tabs-menu ul li a:hover{
+    background-color: #146371;
+}
+
+.tabs-menu ul li a:link{
+    background-color: red;
+}
+
+.dataTables_paginate{
+    
+}
+
+.dataTables_paginate a {
+    border-radius: 50%;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none;
+    color: red!important; /*change the hover text color*/
+  }
+
+
+  /*below block of css for change style when active*/
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button:active {
+    background: none;
+    color: yellow!important;
+  }
