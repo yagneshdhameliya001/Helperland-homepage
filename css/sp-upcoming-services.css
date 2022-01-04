@@ -92,6 +92,10 @@ a{
     background-color: red;
 }
 
+.dataTables_length, .dataTables_length select {
+    margin-top: 10px;
+ }
+
 .dataTables_paginate{
     
 }
