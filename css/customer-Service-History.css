@@ -123,3 +123,9 @@ footer>.container a{
  footer>.container a:hover{
      color: cadetblue;
  }
+
+ #SHTable{
+     border: 1px solid black;
+     table-layout:fixed;
+    width: 98% !important; 
+ }
