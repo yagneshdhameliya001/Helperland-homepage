@@ -1,0 +1,125 @@
+.header{
+    background-color: #525252;
+    height: auto;
+    width: 100%;
+}
+
+.vertical-line{
+    width: 1px;
+    height: 50px;
+    background-color: #e1e1e1;
+}
+
+nav a{
+    color: #ffffff!important;
+}
+
+nav a:hover{
+    background-color: black;
+}
+
+a{
+    text-decoration: none!important;
+}
+
+.dropdown-item span{
+    color: #111111;
+}
+
+.wel-gau{
+    width: 100%;
+    height: 119px;
+    background-color: #f9f9f9;
+}
+
+.hor-line{
+    height: 1px;
+    background-color: #E1E1E1;
+}
+
+.tab-link{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.tab-link-box{
+    padding-top: 20px;
+    padding-bottom:20px;
+}
+
+.tab-link-box:hover{
+    background-color: #146371;
+}
+
+.cap-img{
+    height: 50px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px ;
+}
+
+.complete-btn {
+    color: white;
+    background-color: #67B644;
+    border: none;
+}
+
+.Rate-sp{
+    color: white;
+    border: none;
+    background-color: #6DA9B5;   
+}
+
+.dataTables_length, .dataTables_length select {
+    margin-top: 5px;
+ }
+
+ @media only screen and (max-width: 750px) {
+
+
+    .tab-CSH{
+        display: none;
+    }
+            
+
+    #SHTable tbody,
+    #SHTable tr,
+    #SHTable td {
+        display: block;
+    }
+
+    #SHTable thead {
+        position: absolute;
+        top: -999px;
+        left: -999px;
+    }
+
+    #SHTable tr {
+        margin-bottom: 30px;
+        border: 1px solid #E1E1E1;
+        box-shadow: 5px 10px 15px #E1E1E1;
+    }
+
+    #SHTable tr td{
+        text-align: center;
+    }
+
+    #SHTable tr td .service_pro{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+footer>.container a{
+    color:#ffffff;
+    text-decoration: none;
+ }  
+
+ footer>.container a:hover{
+     color: cadetblue;
+ }

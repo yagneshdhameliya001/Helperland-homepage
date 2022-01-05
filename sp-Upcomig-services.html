@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <!-- Navbar-->
+    <!-- Header Start-->
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#"><img src="./img/logo-small.png" alt="" class="ms-3 main-logo"></a>
@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto me-2">
                     <li class="nav-item px-3">
-                        <a class="nav-link active px-3 nav-padding" href="#">Prices & Services</a>
+                        <a class="nav-link active nav-padding" href="#">Prices & Services</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link nav-padding" href="#">Warranty</a>
@@ -60,16 +60,18 @@
                     <li class="nav-item px-3">
                         <a class="nav-link nav-padding" href="#">Contact</a>
                     </li>
-                    <span class="vertical-line ms-xl-3"></span>
-                    <li class="nav-item text-center ms-xl-3  mt-xl-0 mt-2 ">
-                        <a class="nav-link" aria-current="page" href="#"><img src="img/icon-notification.png"></a>
-                    </li>
-                    <span class="vertical-line ms-xl-3"></span>
-
+                    <div class="d-flex ms-2">
+                        <div class="vertical-line"></div>
+                        <li class="nav-item">
+                            <a class="nav-link ms-2 me-2" aria-current="page" href="#"><img
+                                    src="img/icon-notification.png"></a>
+                        </li>
+                        <div class="vertical-line"></div>
+                    </div>
                     <li class="nav-item dropdown">
                         <a class="nav-link ms-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <img class="ms-2" src="img/admin-user.png" alt="">
+                            <img src="img/admin-user.png" alt="">
                             <img src="img/white-downarrow.png" alt="">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -87,23 +89,18 @@
             </div>
         </nav>
     </header>
-    <!-- navbar end-->
+
+    <!-- Header End-->
 
     <main>
         <div class="wel-san d-flex justify-content-center align-items-center text-center ">
-            <p class="wel">
-                Welcome,
-            </p>
-            <span class="san">
-                Sandip!
-            </span>
+            <h2>Welcome, <b>Sandip</b></h2>
         </div>
 
         <div class="ms-5 mt-3 mb-3">
             <div class="row">
                 <div class="col-lg-3 col-12 tabs-menu">
                     <nav class="navbar navbar-expand-lg navbar-light">
-
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#upcomingServiceTabs" aria-controls="upcomingServiceTabs"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -308,7 +305,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            
+
                         </div>
                         <div class="tab-pane fade accordian-collapse collapse" id="tabs-ServiceSchedule"
                             aria-labelledby="tabs-SS">
@@ -365,7 +362,7 @@
         <!-- privacy policy starts -->
         <div class="text-center mb-0 py-2" style="position:relative; color:white; background-color: #292929;">
             <p class="mb-0 py-2 d-inline">Lorem ipsum dolor sit consectetur elit. Accusantium, nostrum.
-                <a href="#" style="text-decoration: none;">privacy policy</a>
+                <a href="#" style="text-decoration: none; color: white;">privacy policy</a>
             </p>
         </div>
         <!-- privacy policy ends -->
@@ -376,6 +373,7 @@
         $(document).ready(function () {
             $('#myTable').DataTable(
                 {
+                    "ordering": false,
                     "language": {
                         "paginate": {
                             next: '&#8594;', // or '→'

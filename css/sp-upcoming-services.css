@@ -1,6 +1,7 @@
 .header{
     background-color: #525252;
     height: auto;
+    width: 100%;
 }
 
 .vertical-line{
@@ -31,6 +32,13 @@ a{
      height: 119px; 
      background-color: #f9f9f9; 
 }
+
+.wel-gau{
+    width: 100%;
+    height: 119px;
+    background-color: #f9f9f9;
+}
+
 .wel
 {
     font-size: 30px;
@@ -93,12 +101,9 @@ a{
 }
 
 .dataTables_length, .dataTables_length select {
-    margin-top: 10px;
+    margin-top: 5px;
  }
 
-.dataTables_paginate{
-    
-}
 
 .dataTables_paginate a {
     border-radius: 50%;
