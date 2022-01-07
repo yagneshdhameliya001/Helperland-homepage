@@ -65,6 +65,13 @@
    width: 98% !important; 
 }
 
+#ASRTable{
+    margin-top: 10px;
+    border: 1px solid black;
+    table-layout:fixed;
+   width: 98% !important; 
+}
+
 .dropdown-toggle::after {
     content: none;
 }
@@ -79,6 +86,41 @@
     color: white;
     background-color: #FF6B6B;
     border: none;
+}
+
+.new-btn{
+    color: white;
+    background-color: #F2BB37;
+    border: none;
+}
+
+.pending-btn{
+    color: white;
+    background-color: #1FB6FF;
+    border: none;
+}
+
+.complete-btn{
+    color: white;
+    background-color: #67B644;
+    border: none;
+}
+
+.cancel-btn{
+    color: white;
+    background-color: #FF6B6B;
+    border: none;
+}
+
+.cap-img{
+    height: 50px;
+    width: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px ;
 }
 
 .dataTables_length, .dataTables_length select {
@@ -110,3 +152,34 @@
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 750px) {
+            
+
+    #ASRTable tbody,
+    #ASRTable tr,
+    #ASRTable td {
+        display: block;
+    }
+
+    #ASRTable thead {
+        position: absolute;
+        top: -999px;
+        left: -999px;
+    }
+
+    #ASRTable tr {
+        margin-bottom: 30px;
+        border: 1px solid #E1E1E1;
+        box-shadow: 5px 10px 15px #E1E1E1;
+    }
+
+    #ASRTable tr td{
+        text-align: center;
+    }
+
+    #ASRTable tr td .service_pro{
+        justify-content: center;
+        align-items: center;
+    }
+ }
