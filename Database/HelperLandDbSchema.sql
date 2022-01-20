@@ -96,5 +96,29 @@ create table CancelOrder(
 );
 
 
+select * from customer
+
+select * from ContactUs
+
+select * from Address
+
+select * from BookService
+
+select * from CancelOrder
+
+select * from ExtraServices
+
+select * from Invoice
+
+select * from NewsLetter
+
+select * from Payment
+
+select * from Refund
+
+select * from ServiceProvider
+
+
+
 
 
