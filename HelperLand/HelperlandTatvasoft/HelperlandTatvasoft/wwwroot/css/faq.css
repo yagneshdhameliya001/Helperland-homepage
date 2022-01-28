@@ -1,0 +1,267 @@
+﻿.header {
+    background-color: #525252;
+    background-size: cover !important;
+}
+
+nav a {
+    color: #ffffff !important;
+}
+
+.banner-img {
+    background-image: url('../img/faq-banner.png');
+    background-size: cover;
+}
+
+.imgbox {
+    height: 100%;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/*for price page*/
+
+.one-time-btn {
+    color: white;
+    border: none;
+    outline: none;
+    align-content: center;
+    font-size: 28px;
+    width: 553px;
+    height: 59px;
+    background-color: #1D7A8C;
+}
+
+.circle-icon {
+    height: 108px;
+    width: 108px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Style tab links */
+.tablink {
+    color: black;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-bottom: #1D7A8C solid 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    width: 472px;
+    height: 66px;
+}
+
+    .tablink:hover {
+        background-color: #1D7A8C;
+    }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: black;
+    display: none;
+    text-align: center;
+    height: 100%;
+}
+
+.content {
+    display: none;
+    width: 894px;
+    height: 182.33px;
+    text-align: left;
+    size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+footer > .container a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#btn-back-to-top {
+    color: #525252;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 200%;
+}
+
+/* for contact page*/
+
+
+.touch_form .col {
+    max-width: 300px;
+    min-height: 46px;
+    margin: 7px;
+    padding: 0;
+}
+
+.form_areacode {
+    max-width: 57px;
+    background-color: #c8c8c8;
+}
+
+.input_f::placeholder, .placeholder {
+    color: #a0a0a0;
+}
+
+.input_f {
+    border: solid 1px #c8c8c8;
+    padding-left: 16px;
+}
+
+.touch_form .textarea, .touch_form .form_select {
+    width: 614px;
+    padding: 0;
+    min-height: 46px;
+    margin: 7px 0px;
+}
+
+.select_f select {
+    height: 46px;
+    padding: 0 16px !important;
+    color: #a0a0a0;
+}
+
+.touch_form .textarea textarea {
+    min-height: 146px;
+    padding-left: 16px !important;
+    padding-top: 10px !important;
+}
+
+.submit_btn {
+    min-width: 163px;
+    min-height: 46px;
+    background-color: #1d7a8c !important;
+    border: none !important;
+    font-size: 20px;
+}
+
+.get-in-touch {
+    font-size: 28px;
+    color: #4f4f4f;
+    margin-bottom: 20px;
+}
+
+.map_marker {
+    position: absolute !important;
+    top: 11vw;
+    left: 45vw;
+}
+
+.container_map {
+    margin-top: 80px;
+}
+
+.map_image {
+    width: 100vw;
+    height: auto;
+}
+
+/* Login pop-up */
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.login-button {
+    background-color: #1d7a8c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 50% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 380px;
+    /* Could be more or less, depending on screen size */
+}
+
+
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}

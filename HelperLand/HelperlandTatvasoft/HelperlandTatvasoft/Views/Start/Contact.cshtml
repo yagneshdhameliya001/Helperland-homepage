@@ -1,0 +1,280 @@
+﻿@model HelperlandTatvasoft.Models.Contact
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/css/faq.css?v=101">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5602f8a8c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header start-->
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" asp-controller="Start" asp-action="Index">
+                <img src="~/img/white-logo-transparent-background.png" alt=""
+                     class="main-logo ms-2" width="73px" height="54px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                           style="background-color: #29626D;">Book now</span></a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" asp-controller="Start" asp-action="Prices">Prices and services</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Warranty</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3"
+                           style="background-color: #29626D;" asp-controller="Start" asp-action="Index">Login</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                           style="background-color: #29626D;">Become a helper</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header end-->
+    
+    <!--main start-->
+
+    <main>
+        <!--Prices img start-->
+        <section>
+            <div class="imgbox">
+                <img src="~/img/group-16_2.png" alt="" style="object-fit:fill;" class="center-fit">
+            </div>
+        </section>
+        <!--Prices img end-->
+
+        <section class="my-4">
+            <p class="text-center mb-1" style="font-size: 36px; color: #4F4F4F;"><b>Contact us</b></p>
+            <div class="d-flex justify-content-center mb-2">
+                <div class="me-1">
+                    <hr style="width: 50px;">
+                </div>
+                <div class="text-center ms-2;" style="margin-top: 4px;">
+                    <img src="~/img/forma-1-copy-5.png" alt="">
+                </div>
+                <div class="ms-1">
+                    <hr style="width: 50px;">
+                </div>
+            </div>
+        </section>
+
+        <div class="container text-center mb-5">
+            <div class="row">
+                <div class="col-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="54" class="mb-3">
+                        <path fill-rule="evenodd" fill="#1D7A8C" d="M17.1.2c4.584 0 8.85 1.713 12.7 4.9 3.06 3.8 4.194 7.252 4.194 12.53 0 4.203-3.059 9.95-5.726 14.975-.819 1.525-1.598 2.991-1.788 4.3L18.237 53.23c-.331.685-.357.978-1.831.645a1.378 1.378 0 0 1-.643-.645L7.952 36.905c-.623-1.309-1.403-2.775-2.202-4.3C3.63 27.581.5 21.833.5 17.63c0-5.278 1.413-8.74 4.491-12.53C8.7 1.913 12.316.2 17.1.2zm0 8.496c2.208 0 4.292.939 5.791 2.444 1.5 1.505 2.435 3.598 2.435 6.49 0 1.74-.935 3.831-2.435 5.337-1.499 1.505-3.583 2.444-5.791 2.444-2.389 0-4.473-.939-5.992-2.444-1.499-1.505-2.435-3.597-2.435-5.337 0-2.894.936-4.985 2.435-6.49 1.519-1.505 3.603-2.444 5.992-2.444zm3.844 5.264c-1.013-1.16-2.395-2.506-3.844-2.506-1.649 0-2.42 1.346-3.54 2.506-1.13.152-2.14 1.54-2.14 3.68 0 .968 1.01 2.357 2.14 3.48 1.12 1.17 1.891 1.534 3.54 1.534 1.449 0 2.831-.364 3.844-1.534 1.012-1.123 1.636-2.512 1.636-3.48.001-2.14-.622-3.528-1.636-3.68zM27.8 6.957c-3.311-2.6-6.856-4.203-10.7-4.203-3.35 0-7.59 1.603-10.161 4.203-2.59 2.58-4.188 6.159-4.188 10.683 0 3.529 2.883 8.925 5.414 13.675.819 1.545 1.598 3.03 2.26 4.398L17.8 49.456l5.772-13.743c.663-1.368 1.568-2.853 2.26-4.398 2.531-4.75 5.414-10.146 5.414-13.675.002-4.524-1.595-8.103-3.446-10.683z" />
+                    </svg>
+                    <div>
+                        <p class="mb-0">1111, Lorem ipsum text 100,</p>
+                    </div>
+                    <div>
+                        <p>Lorem ipsum AB</p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="~/img/phone-call.png" alt="" width="44.42px" height="50.38px" class="mb-3">
+                    <div>
+                        <p class="mb-0">+49(40) 123 56 7890</p>
+                    </div>
+                    <div>
+                        <p>+49(40) 987 56 0000</p>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="~/img/vector-smart-object.png" alt="" width="61px" height="37px" class="mb-3">
+                    <div>
+                        <p>info@helperland.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin-right: 150px; margin-left: 150px;" class="mb-5">
+
+        <div class="container-fluid">
+            <h4 class="text-center get-in-touch"><b>Get in touch with us</b></h4>
+            <div class="container mt-4">
+                <form method="post" asp-controller="Start" asp-action="ContactAdd">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" asp-for="Fname" id="firstName" placeholder="First name" style="height:46px;margin-bottom: 15px;">
+                            <span asp-validation-for="Fname" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" asp-for="Lname" id="lastName" placeholder="Last name" style="height:46px;margin-bottom: 15px;">
+                            <span asp-validation-for="Lname" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="input-group" style="height:46px;margin-bottom: 15px;">
+                                <span class="input-group-text" style="height:46px;" id="basic-addon1">+49</span>
+                                <input type="phone" class="form-control" id="phone" asp-for="PhoneNumber" placeholder="Mobile number"><br>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" asp-for="Email" id="email" placeholder="Email" style="height:46px;margin-bottom: 15px;">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+
+                        <div class="col-md-8">
+
+                            <input type="text" class="form-control mx-auto" asp-for="Subject" id="msg" placeholder="Subject" style="height:46px;margin-bottom: 15px;">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <textarea class="form-control mx-auto" placeholder="Message" asp-for="Message" id="message" style="height:146px;"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form_btn w-100 mt-3 d-flex align-items-center justify-content-center mb-3">
+                        <button type="submit" class="btn submit_btn rounded-pill text-white mb-4 mb-4">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="container_map position-relative">
+            <img src="~/img/group-16.png" alt="" class="map_image">
+        </div>
+
+        <div class="text-center my-3 mb-5 mt-5">
+            <h4 class="mb-3">GET OUR NEWSLETTER</h4>
+            <form action="">
+                <input type="text" name="email" placeholder="YOUR EMAIL" class="rounded-pill px-3"
+                       style="border: 1px solid gray;">
+                <input type="submit" name="submit" class="rounded-pill border border-0 px-3" id=""
+                       style="background-color: #ff7b6d; padding-top: 3px; padding-bottom: 3px;  color: #ffffff;">
+            </form>
+        </div>
+
+        <button type="button" class="btn btn-floating" id="btn-back-to-top" style="z-index: 100;"><i class="fas fa-chevron-circle-up"></i></button>
+    </main>
+
+    <!--main ends-->
+    <!-- footer starts -->
+    <footer style="background-color: #111111;">
+
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- logo starts -->
+            <div>
+                <img width="100px" src="~/img/white-logo-transparent-background.png" alt="">
+            </div>
+            <!-- logo ends -->
+            <!-- links starts -->
+            <div class="d-flex flex-wrap text-center justify-content-center" style="color: white;">
+                <a class="px-3" asp-controller="Start" asp-action="Index">HOME</a>
+                <a class="px-3" asp-controller="Start" asp-action="about">ABOUT</a>
+                <a class="px-3" href="#testimonials">TESTIMONIALS</a>
+                <a class="px-3" asp-controller="Start" asp-action="faq">FAQS</a>
+                <a class="px-3" href="#">INSURRANCE POLICY</a>
+                <a class="px-3" href="#">IMPRESSUM</a>
+            </div>
+            <!-- links ends -->
+            <!-- fb insta starts -->
+            <div>
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-instagram"></i></a>
+            </div>
+            <!-- fb insta ends -->
+        </div>
+
+        <!-- privacy policy starts -->
+        <div class="text-center mb-0 py-2" style="position:relative; color:white; background-color: #292929;">
+            <p class="mb-0 py-2 d-inline" style="font-size: 14px; color: #9BA0A3;">
+                ©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+            </p>
+        </div>
+        <!-- privacy policy ends -->
+
+    </footer>
+    <!-- footer ends -->
+    <!-- scripts -->
+    <script>
+
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+
+</html>
+

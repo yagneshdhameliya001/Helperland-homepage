@@ -47,7 +47,7 @@
             <a class="nav-link nav-padding" href="#">Blog</a>
           </li>
           <li class="nav-item px-3">
-            <a class="nav-link border border-1 rounded-pill px-3 nav-padding" href="#">Login</a>
+            <a class="nav-link border border-1 rounded-pill px-3 nav-padding" href="#" onclick="document.getElementById('id01').style.display='block'">Login</a>
           </li>
           <li class="nav-item px-3">
             <a class="nav-link border border-1 rounded-pill px-3 nav-padding" href="#">Become a Helper</a>
@@ -71,6 +71,37 @@
     </nav>
     <!-- navigation end-->
 
+    <!-- Login pop-up -->
+
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+
+          <div class="container">
+              <h3><b>Login to your account</b></h3>
+              
+              <input type="text" placeholder="Email">
+
+              
+              <input type="password" placeholder="Password">
+
+              <br>
+          
+              <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+              <button type="submit" class="login-button rounded-pill">Login</button>
+              
+          </div>
+
+          <div class="container" style="background-color:#f1f1f1">   
+              <span class="psw"> <a href="#" class="d-flex justify-content-center"> Forgot password?</a></span>
+              <span class="psw d-flex justify-content-center"> Don't have an account? <a href="#">Create an account</a></span>
+          </div>
+      </form>
+  </div>
+
+  <!-- Login pop-up end-->
     <!-- Lorem head-->
     <div class="text-center text-lg-start ps-lg-5 col-lg-5 heading">
       <h1 class="mb-3">Lorem, ipsum dolor.</h1>

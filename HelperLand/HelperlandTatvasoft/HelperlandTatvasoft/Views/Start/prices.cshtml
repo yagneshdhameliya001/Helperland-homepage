@@ -1,0 +1,518 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/faq.css?v=101">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/5602f8a8c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Header start-->
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="~/img/white-logo-transparent-background.png" alt=""
+                     class="main-logo ms-2" width="73px" height="54px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                           style="background-color: #29626D;">Book now</span></a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Prices and services</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Warranty</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" asp-controller="Start" asp-action="Index"
+                           style="background-color: #29626D;" >Login</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                           style="background-color: #29626D;">Become a helper</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header end-->
+    <!-- Login pop-up -->
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="#" method="post">
+
+            <div class="container">
+                <h3><b>Login to your account</b></h3>
+
+                <input type="text" placeholder="Email">
+
+
+                <input type="password" placeholder="Password">
+
+                <br>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <button type="submit" class="login-button rounded-pill">Login</button>
+
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <span class="psw"> <a href="#" class="d-flex justify-content-center"> Forgot password?</a></span>
+                <span class="psw d-flex justify-content-center"> Don't have an account? <a href="#">Create an account</a></span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Login pop-up end-->
+    <!--main start-->
+
+    <main>
+        <!--Prices img start-->
+        <section>
+            <div class="imgbox">
+                <img src="~/img/group-18.png" alt="" style="object-fit:fill;" class="center-fit">
+            </div>
+        </section>
+        <!--Prices img end-->
+
+        <section class="my-4">
+            <h1 class="text-center mb-1"><b>Prices</b></h1>
+            <div class="d-flex justify-content-center mb-2">
+                <div>
+                    <hr style="width: 50px;">
+                </div>
+                <div class="text-center ms-2;" style="margin-top: 4px;">
+                    <img src="~/img/forma-1-copy-5.png" alt="">
+                </div>
+                <div>
+                    <hr style="width: 50px;">
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center">
+            <button class="one-time-btn px-3"><b>One time</b></button>
+        </div>
+
+        <div style="margin-left: auto; margin-right: auto;">
+            <div class="d-flex justify-content-center mx-3 mt-4">
+                <p style="font-size: 40px; color: #646464;">€ &nbsp;<b>20</b>
+                <p style="margin-top: auto; font-size: 20px; color: #646464;" class="mb-4">/hr</p>
+                </p>
+            </div>
+
+            <div class="text-center text-lg-start ps-lg-5 col-lg-5 heading my-3"
+                 style="margin-left: auto; margin-right: auto;">
+                <div style="margin-left: 151px;">
+                    <img class="me-2 mb-0" src="~/img/forma-1_5.png" alt="">
+                    <p class="d-inline mb-0" style="color: #646464;"> Lower prices</p>
+                </div>
+                <div style="margin-left: 151px;">
+                    <img class="me-2 my-0" src="~/img/forma-1_5.png" alt="">
+                    <p class="d-inline my-0" style="color: #646464;">Easy online & secure payment</p>
+                </div>
+                <div style="margin-left: 151px;" class="mb-4">
+                    <img class="me-2" src="~/img/forma-1_5.png" alt="">
+                    <p class="d-inline" style="color: #646464;">Easy amendment</p>
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin-right: 210px; margin-left: 210px;">
+
+        <h1 class="text-center mb-1">Extra services</h1>
+        <div class="d-flex justify-content-center mb-2">
+            <div>
+                <hr style="width: 50px;">
+            </div>
+            <div class="text-center ms-2;" style="margin-top: 4px;">
+                <img src="~/img/forma-1-copy-5.png" alt="">
+            </div>
+            <div>
+                <hr style="width: 50px;">
+            </div>
+        </div>
+
+
+        <div class="container my-5">
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-lg-2 mx-3 my-3">
+                    <div class="text-center">
+                        <div class="circle-icon mb-4 mx-auto">
+                            <img src="~/img/3.png" alt="...">
+                        </div>
+                        <div class="text-center">
+                            <h5>Inside cabinets</h5>
+                            <h6>30 minutes</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mx-3 my-3">
+                    <div class="text-center">
+                        <div class="circle-icon mb-4 mx-auto">
+                            <img src="~/img/5.png" alt="...">
+                        </div>
+                        <div class="text-center">
+                            <h5>Inside cabinets</h5>
+                            <h6>30 minutes</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 mx-3 my-3">
+                    <div class="text-center">
+                        <div class="circle-icon mb-4 mx-auto">
+                            <img src="~/img/4.png" alt="...">
+                        </div>
+                        <div class="text-center">
+                            <h5>Inside cabinets</h5>
+                            <h6>30 minutes</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mx-3 my-3">
+                    <div class="text-center">
+                        <div class="circle-icon mb-4 mx-auto">
+                            <img src="~/img/2.png" alt="...">
+                        </div>
+                        <div class="text-center">
+                            <h5>Inside cabinets</h5>
+                            <h6>30 minutes</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 mx-3 my-3">
+                    <div class="text-center">
+                        <div class="circle-icon mb-4 mx-auto">
+                            <img src="~/img/1.png" alt="...">
+                        </div>
+                        <div class="text-center">
+                            <h5>Inside cabinets</h5>
+                            <h6>30 minutes</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: #F6F6F6;" class="pt-4">
+            <div>
+                <h1 class="text-center mb-1">What we include in cleaning</h1>
+                <div class="d-flex justify-content-center mb-2">
+                    <div>
+                        <hr style="width: 50px;">
+                    </div>
+                    <div class="text-center ms-2;" style="margin-top: 4px;">
+                        <img src="~/img/forma-1-copy-5.png" alt="">
+                    </div>
+                    <div>
+                        <hr style="width: 50px;" class="mt-4">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container mb-4">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="mb-4">
+                            <img src="~/img/group-18_3.png" alt=""
+                                 style="height: 210px; width: 333px; object-fit: fill;">
+                        </div>
+                        <div>
+                            <p style="font-size: 20px;">Bedroom and Living Room</p>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Dust all accessible surfaces</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Wipe down all mirrors and glass fixtures</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Clean all floor surfaces</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Take out garbage and recycling</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="mb-4">
+                            <img src="~/img/group-18_4.png" alt=""
+                                 style="height: 210px; width: 333px; object-fit: fill;">
+                        </div>
+                        <div>
+                            <p style="font-size: 20px;">Bathrooms</p>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Wash and sanitize the toilet, shower, tub, sink</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Dust all accessible surfaces </p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Wipe down all mirrors and glass fixtures </p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Clean all floor surfaces</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Take out garbage and recycling</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="mb-4">
+                            <img src="~/img/group-18_2.png" alt=""
+                                 style="height: 210px; width: 333px; object-fit: fill;">
+                        </div>
+                        <div>
+                            <p style="font-size: 20px;">Kitchen</p>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Dust all accessible surfaces</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Empty sink and load up dishwasher</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Wipe down all mirrors and glass fixtures </p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Clean all floor surfaces</p>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <img src="~/img/right-arrow.png" id="right-arrow" alt="" class="arrow-btn me-2"
+                                     height="22px" width="22px">
+                                <p>Take out garbage and recycling</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="my-4">
+            <h2 class="text-center mb-1"><b>Why Helperland</b></h2>
+            <div class="d-flex justify-content-center mb-2">
+                <div>
+                    <hr style="width: 50px;">
+                </div>
+                <div class="text-center ms-2;" style="margin-top: 4px;">
+                    <img src="~/img/forma-1-copy-5.png" alt="">
+                </div>
+                <div>
+                    <hr style="width: 50px;">
+                </div>
+            </div>
+        </section>
+
+        <div class="container-5">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="mb-4 ms-2" style="text-align: right;">
+                        <div class="mb-4">
+                            <h5>
+                                <b>Experienced and vetted professionals</b>
+                            </h5>
+                            <p style="font-size: 14px;">
+                                dominate the industry in scale and scope with an adaptable, extensive network that
+                                consistently delivers exceptional results.
+                            </p>
+                        </div>
+                        <div>
+                            <h5>
+                                <b>Dedicated customer service</b>
+                            </h5>
+                            <p style="font-size: 14px;">
+                                to our customers and are guided in all we do by their needs. The team is always happy to
+                                support you and offer all the information. you need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img src="~/img/the-best-img-1.png" alt="" width="345px" height="241px">
+                </div>
+                <div class="col-sm">
+                    <div class="mb-4 ms-2" style="text-align: start;">
+                        <div class="mb-4">
+                            <h5>
+                                <b>Every cleaning is insured</b>
+                            </h5>
+                            <p class="pb-3  ">
+                                and seek to provide exceptional service and engage in proactive behavior. We‘d be happy
+                                to clean your homes.
+                            </p>
+                        </div>
+                        <div>
+                            <h5>
+                                <b>Secure online payment</b>
+                            </h5>
+                            <p>
+                                Payment is processed securely online. Customers pay safely online and manage the
+                                booking.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- newsletter starts -->
+        <div class="text-center my-3 mb-5 mt-5">
+            <h4 class="mb-3">GET OUR NEWSLETTER</h4>
+            <form action="">
+                <input type="text" name="email" placeholder="YOUR EMAIL" class="rounded-pill px-3"
+                       style="border: 1px solid gray;">
+                <input type="submit" name="submit" class="rounded-pill border border-0 px-3" id=""
+                       style="background-color: #ff7b6d; padding-top: 3px; padding-bottom: 3px;  color: #ffffff;">
+            </form>
+        </div>
+
+        <button type="button" class="btn btn-floating" id="btn-back-to-top" style="z-index: 100;">
+            <i class="fas fa-chevron-circle-up"></i>
+        </button>
+    </main>
+
+    <!-- main end-->
+    <!-- footer starts -->
+    <footer style="background-color: #111111;">
+
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- logo starts -->
+            <div>
+                <img width="100px" src="~/img/white-logo-transparent-background.png" alt="">
+            </div>
+            <!-- logo ends -->
+            <!-- links starts -->
+            <div class="d-flex flex-wrap text-center justify-content-center" style="color: white;">
+                <a class="px-3" asp-controller="Start" asp-action="Index">HOME</a>
+                <a class="px-3" asp-controller="Start" asp-action="About">ABOUT</a>
+                <a class="px-3" href="#testimonials">TESTIMONIALS</a>
+                <a class="px-3" asp-controller="Start" asp-action="faq">FAQS</a>
+                <a class="px-3" href="#">INSURRANCE POLICY</a>
+                <a class="px-3" href="#">IMPRESSUM</a>
+            </div>
+            <!-- links ends -->
+            <!-- fb insta starts -->
+            <div>
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-instagram"></i></a>
+            </div>
+            <!-- fb insta ends -->
+        </div>
+
+        <!-- privacy policy starts -->
+        <div class="text-center mb-0 py-2" style="position:relative; color:white; background-color: #292929;">
+            <p class="mb-0 py-2 d-inline" style="font-size: 14px; color: #9BA0A3;">
+                ©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+            </p>
+        </div>
+        <!-- privacy policy ends -->
+
+    </footer>
+    <!-- footer ends -->
+    <!-- scripts -->
+    <script>
+
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+    
+</body>
+
+</html>

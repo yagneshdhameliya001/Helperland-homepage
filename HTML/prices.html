@@ -52,7 +52,7 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                        <a class="nav-link border border-1 rounded-pill px-3" href="index.html?login=1"
                             style="background-color: #29626D;">Login</a>
                     </li>
                     <li class="nav-item px-3">
@@ -66,6 +66,37 @@
 
     <!-- Header end-->
 
+     <!-- Login pop-up -->
+
+     <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+  
+            <div class="container">
+                <h3><b>Login to your account</b></h3>
+                
+                <input type="text" placeholder="Email">
+  
+                
+                <input type="password" placeholder="Password">
+  
+                <br>
+            
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                <button type="submit" class="login-button rounded-pill">Login</button>
+                
+            </div>
+  
+            <div class="container" style="background-color:#f1f1f1">   
+                <span class="psw"> <a href="#" class="d-flex justify-content-center"> Forgot password?</a></span>
+                <span class="psw d-flex justify-content-center"> Don't have an account? <a href="#">Create an account</a></span>
+            </div>
+        </form>
+    </div>
+  
+    <!-- Login pop-up end-->
     <!--main start-->
 
     <main>
