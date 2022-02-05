@@ -6,6 +6,8 @@
     Layout = null;
 }
 
+@using Microsoft.AspNetCore.Http;
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,98 +35,159 @@
     <header class="header">
 
         <!-- navigation-->
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" asp-controller="Start" asp-action="Index">
-                <img src="./img/white-logo-transparent-background.png" alt=""
-                     class="main-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-                <i class="fas fa-bars"></i>
-            </button>
+        @if (Context.Session.GetString("username") != null)
+        { 
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" asp-controller="Start" asp-action="Index">
+                    <img src="./img/white-logo-transparent-background.png" alt=""
+                         class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-2">
-                    <li class="nav-item px-3">
-                        <a class="nav-link active border border-1 rounded-pill px-3 nav-padding" href="#">
-                            Book a
-                            Cleaner
-                        </a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link nav-padding" asp-controller="Start" asp-action="prices">Prices</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link nav-padding" href="#">Our Guarantee</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link nav-padding" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3 nav-padding" data-toggle="modal" data-target="#exampleModal">Login</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3 nav-padding" href="#">Become a Helper</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                           aria-expanded="false">
-                            <img style="vertical-align: baseline;" src="img/ic-flag.png" alt="">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="img/ic-flag.png" alt=""> <span>India</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="img/ic-flag.png" alt=""> <span>U.K.</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="img/ic-flag.png" alt=""> <span>U.S.A.</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active border border-1 rounded-pill px-3 nav-padding" href="#">
+                                Book a
+                                Cleaner
+                            </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" asp-controller="Start" asp-action="prices">Prices</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" href="#">Our Guarantee</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" href="#">Blog</a>
+                          </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <img style="vertical-align: baseline;" src="img/ic-flag.png" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>India</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>U.K.</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>U.S.A.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        }
+        else
+        {
+            <!-- navigation-->
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" asp-controller="Start" asp-action="Index">
+                    <img src="~/img/white-logo-transparent-background.png" alt=""
+                         class="main-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2">
+                        <li class="nav-item px-3">
+                            <a class="nav-link active border border-1 rounded-pill px-3 nav-padding" href="#">
+                                Book a
+                                Cleaner
+                            </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" asp-controller="Start" asp-action="prices">Prices</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" href="#">Our Guarantee</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link nav-padding" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3 nav-padding" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3 nav-padding" asp-controller="Start" asp-action="BecomeAHelper">Become a Helper</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <img style="vertical-align: baseline;" src="img/ic-flag.png" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>India</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>U.K.</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/ic-flag.png" alt=""> <span>U.S.A.</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        }
+
+
         <!-- navigation end-->
         <!-- Login pop-up -->
 
         <div id="exampleModal" class="modal" role="dialog">
 
-            <form method="post" id="loginForm" class="modal-content" style="background-color: #fefefe; margin: 5% auto 50% auto;  border: 1px solid #888;
+            <form method="post" id="loginForm" class="modal-content" asp-controller="Start" asp-action="VerifyEmail" style="background-color: #fefefe; margin: 5% auto 50% auto;  border: 1px solid #888;
     width: 380px;">
 
                 <div class="container">
                     <h3><b>Login to your account</b></h3>
-                    <div id="msg">
-                        <ul style="color:red;">Invalid Username or Password</ul>
-                    </div>
 
-                    <input type="text" placeholder="Email" asp-for="Email">
+                    <input type="text" placeholder="Email" asp-for="Email" id="Email">
                     <span asp-validation-for="Email"></span>
 
 
-                    <input type="password" placeholder="Password" asp-for="Password">
+                    <input type="password" placeholder="Password" asp-for="Password" id="Password">
                     <span asp-validation-for="Password"></span>
                     <br>
 
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
-                    <button type="submit" class="login-button rounded-pill" onclick="Login()">Login</button>
+                    <button type="submit" class="login-button rounded-pill" id="login">Login</button>
 
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                    <span class="psw"> <a asp-controller="Start" asp-action="CustomerRegister" class="d-flex justify-content-center"> Forgot password?</a></span>
-                    <span class="psw d-flex justify-content-center"> Don't have an account? <a asp-controller="Start" asp-action="Contact" class="d-flex justify-content-center">Create an account</a></span>
+                    <span class="psw" style="color:aqua"> <a class="d-flex justify-content-center" data-toggle="modal" data-target="#ForgotPassword" id="forgot" data-dismiss="modal"> Forgot password?</a></span>
+                    <span class="psw d-flex justify-content-center"> Don't have an account? <a asp-controller="Start" asp-action="CustomerRegister" class="d-flex justify-content-center">Create an account</a></span>
                 </div>
 
 
@@ -132,6 +195,31 @@
         </div>
 
         <!-- Login pop-up end-->
+        <!-- Forgot password pop-up -->
+
+        <div id="ForgotPassword" class="modal mt-4" role="dialog">
+
+            <form method="post" id="ForgotForm" class="modal-content" asp-controller="Start" asp-action="SendEmailForForgotPassword" style="background-color: #fefefe; margin: 5% auto 50% auto;  border: 1px solid #888;
+    width: 380px;">
+
+                <div class="container">
+                    <h3><b>Forgot Password</b></h3>
+
+                    <input type="text" placeholder="Email" asp-for="Email" id="Email">
+                    <span asp-validation-for="Email"></span>
+                    <button type="submit" class="login-button rounded-pill" id="Send">Send</button>
+
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <span class="psw"> <a asp-controller="Start" asp-action="Index" class="d-flex justify-content-center"> Login now</a></span>
+                </div>
+
+                <h5>@ViewBag.message</h5>
+            </form>
+        </div>
+
+        <!-- Forgot password pop-up end-->
         <!-- Lorem head-->
         <div class="text-center text-lg-start ps-lg-5 col-lg-5 heading">
             <h1 class="mb-3">Lorem, ipsum dolor.</h1>
@@ -528,28 +616,44 @@
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
-    <script>
-        $("#msg").hide();
-        var Login = function () {
-            var data = $("#loginForm").serialize();
-            $.ajax({
-                type:"post",
-                url:"/Start/VerifyLogin",
-                data: data,
-                success: function (result) {
-                    if (result.status == false) {
-                        alert("sachu");
-                        $("#loginForm")[0].reset();
-                        $("#msg").show();
-                    }
-                    else {
-                        alert("Sachu");
-                        $("#msg").hide();
-                    }
-                }
-            })
-        }
-    </script>
+    @*<script>
+            $(document).ready(function () {
+                $("#forgot").click(function () {
+                    $("#exampleModal").css("display", "none");
+                });
+            });
+        </script>*@
+
+    @*<script>
+            $(document).ready(function () {
+                $('#msg').hide();
+                $('#login').click(function () {
+                    var data = {
+                        "Email": $("#Email").val(),
+                        "Password": $("#Password").val()
+                    };
+                    $.ajax({
+                        url: "/Start/VerifyEmail",
+                        type: "POST",
+                        data: JSON.stringify(data),
+                        dataType: "json",
+                        contentType: false,
+                        processData: false,
+                        success: function (response) {
+                            if (response.Success) {
+                                $.post("@Url.Action("about", "Start")");
+                            }
+                            else {
+                                window.location.href = "@Url.Action("Contact", "Start")";
+                            }
+                        },
+                        error: function () {
+                            console.log('Login Fail!!!');
+                        }
+                    });
+                });
+            });
+        </script>*@
     @*<script>
             // Get the modal
             var modal = document.getElementById('id01');

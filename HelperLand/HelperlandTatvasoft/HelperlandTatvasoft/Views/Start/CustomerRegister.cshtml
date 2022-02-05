@@ -1,4 +1,5 @@
-﻿@*
+﻿@model HelperlandTatvasoft.Models.User
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -92,27 +93,27 @@
         </section>
 
         <div class="container mt-4">
-            <form method="post" asp-controller="Start" asp-action="ContactAdd">
+            <form method="post" asp-controller="Start" asp-action="CustomerAdd">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="firstName" placeholder="First name" style="height:46px;margin-bottom: 15px;">
-                        <span class="text-danger"></span>
+                        <input type="text" class="form-control" id="firstName" asp-for="FirstName" placeholder="First name" style="height:46px;margin-bottom: 15px;">
+                        <span class="text-danger" asp-validation-for="FirstName"></span>
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="lastName" placeholder="Last name" style="height:46px;margin-bottom: 15px;">
-                        <span class="text-danger"></span>
+                        <input type="text" class="form-control" id="lastName" asp-for="LastName" placeholder="Last name" style="height:46px;margin-bottom: 15px;">
+                        <span class="text-danger" asp-validation-for="LastName"></span>
                     </div>
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <input type="email" class="form-control" id="email" placeholder="Email" style="height:46px;margin-bottom: 15px;">
-                        <span class="text-danger"></span>
+                        <input type="email" class="form-control" id="email" placeholder="Email" asp-for="Email" style="height:46px;margin-bottom: 15px;">
+                        <span class="text-danger" asp-validation-for="Email"></span>
                     </div>
                     <div class="col-md-4">
                         <div class="input-group" style="height:46px;margin-bottom: 15px;">
                             <span class="input-group-text" style="height:46px;" id="basic-addon1">+49</span>
-                            <input type="phone" class="form-control" id="phone" placeholder="Mobile number"><br>
-                            <span class="text-danger"></span>
+                            <input type="phone" class="form-control" id="phone" placeholder="Mobile number" asp-for="Mobile"><br>
+                            <span class="text-danger" asp-validation-for="Mobile"></span>
                         </div>
 
                     </div>
@@ -120,13 +121,13 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <input type="password" class="form-control" id="password" placeholder="Password" style="height:46px;margin-bottom: 15px;">
-                        <span class="text-danger"></span>
+                        <input type="password" class="form-control" id="password" placeholder="Password" asp-for="Password" style="height:46px;margin-bottom: 15px;">
+                        <span class="text-danger" asp-validation-for="Password"></span>
                     </div>
                     <div class="col-md-4">
                         <div class="input-group" style="height:46px;margin-bottom: 15px;">
                             <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password"><br>
-                            <span class="text-danger"></span>
+                            <span class="text-danger" asp-validation-for="Password"></span>
                         </div>
 
                     </div>
@@ -140,11 +141,11 @@
                 </div>
             </form>
             <div class="d-flex justify-content-center">
-                <span class="mt-1"> Already registered? <a asp-controller="Start" asp-action="Index" style="text-decoration:none" > Login now </a></span>
+                <span class="mt-1"> Already registered? <a asp-controller="Start" asp-action="Index" style="text-decoration:none"> Login now </a></span>
             </div>
-            
-        </div>
 
+        </div>
+        <h3>@ViewBag.Error</h3>
     </main>
     <!-- footer starts -->
     <footer style="background-color: #111111;">
@@ -216,7 +217,7 @@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    
+
 </body>
 
 </html>

@@ -73,6 +73,8 @@ namespace HelperlandTatvasoft.Models
             {
                 entity.ToTable("User");
 
+                entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasMaxLength(100);

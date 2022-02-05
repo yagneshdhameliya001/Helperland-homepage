@@ -25,6 +25,7 @@ namespace HelperlandTatvasoft
         {
             services.AddControllersWithViews();
             services.AddScoped<HelperLandContext>();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +39,12 @@ namespace HelperlandTatvasoft
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            
+
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

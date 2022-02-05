@@ -6304,11 +6304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HelperlandTatvasoft\\HelperlandTatvasoft\\HelperlandTatvasoft.csproj",
+      "projectUniqueName": "E:\\helperland\\HelperLand\\HelperlandTatvasoft\\HelperlandTatvasoft\\HelperlandTatvasoft.csproj",
       "projectName": "HelperlandTatvasoft",
-      "projectPath": "D:\\HelperlandTatvasoft\\HelperlandTatvasoft\\HelperlandTatvasoft.csproj",
+      "projectPath": "E:\\helperland\\HelperLand\\HelperlandTatvasoft\\HelperlandTatvasoft\\HelperlandTatvasoft.csproj",
       "packagesPath": "C:\\Users\\yagne\\.nuget\\packages\\",
-      "outputPath": "D:\\HelperlandTatvasoft\\HelperlandTatvasoft\\obj\\",
+      "outputPath": "E:\\helperland\\HelperLand\\HelperlandTatvasoft\\HelperlandTatvasoft\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yagne\\AppData\\Roaming\\NuGet\\NuGet.Config",

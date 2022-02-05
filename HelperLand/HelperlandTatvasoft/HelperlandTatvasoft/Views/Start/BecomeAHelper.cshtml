@@ -1,0 +1,267 @@
+﻿@model HelperlandTatvasoft.Models.User
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/css/sp-become-a-pro.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/5602f8a8c9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="~/img/white-logo-transparent-background.png" alt=""
+                     class="main-logo ms-4" width="73px" height="54px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto me-2">
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#">Book now</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" asp-controller="Start" asp-action="Prices">Prices and services</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Warranty</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" asp-controller="Start" asp-action="Index">Login</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link border border-1 rounded-pill px-3" href="#">Become a helper</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <img style="vertical-align: baseline;" src="~/img/ic-flag.png" alt="">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/img/ic-flag.png" alt=""> <span>India</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/img/ic-flag.png" alt=""> <span>U.K.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/img/ic-flag.png" alt=""> <span>U.S.A.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="mt-3">
+            <div class="form container-fluid text-center">
+
+                <form method="post" id="ForgotForm" asp-controller="Start" asp-action="HelperRegister">
+
+                    <h1 class="title pt-2 pb-2">Register Now!</h1>
+
+                    <input class="border-box form-font-color" type="name" placeholder="First Name" asp-for="FirstName">
+                    <input class="border-box form-font-color" type="name" placeholder="Last Name" asp-for="LastName">
+                    <input class="border-box form-font-color" type="email" placeholder="Email Address" asp-for="Email">
+                    <label class=" align-items-center country-code">+49</label><input class="number-box form-font-color align-items-center" type="mobile-number"
+                                                                                      placeholder="Mobile Number" asp-for="Mobile">
+                    <input type="password" class="border-box form-font-color" placeholder="Password"
+                           id="exampleInputPassword1" asp-for="Password">
+                    <input type="password" class="border-box form-font-color" placeholder="Confirm Password"
+                           id="exampleInputPassword1">
+                    <input class="form-check-input mb-2" type="checkbox" value=""><span class="checkbox-text ps-2 pe-1 me-5">Send me newsletters from Helperland</span>
+                    <input class="form-check-input mb-2" type="checkbox" value=""><span class="checkbox-text ps-2 pe-1 ">
+                        I
+                        accept <span class="tc-color">terms and conditions</span> & <span class="tc-color">
+                            privacy
+                            policy
+                        </span>
+                    </span>
+                    <button class="active-form text-light mt-3">Get Started <img src="~/img/arrow-white (2).png"></button>
+                </form>
+
+                <h3>@ViewBag.Error</h3>
+            </div>
+        </section>
+
+        <div class="text-center mt-lg-3">
+            <a href="#nextSection">
+                <i class="fas fa-arrow-down border border-1 rounded-circle p-2 text-center mb-4"
+                   style="color: #ffffff;"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="nextSection">
+            <h2 class="text-center my-5 "><b>How it works</b></h2>
+            <div class="container">
+                <div class="row mb-5 ms-5">
+                    <div class="col mt-auto mb-auto ms-5">
+                        <h3 class="ms-5">Register yourself</h3>
+                        <p class="ms-5">
+                            Provide your basic information to register <br>yourself as a service provider.
+                        </p>
+                        <a href="" class="ms-5 how_to_link">Read more <img src="~/img/rightArrow.png" alt=""></a>
+                    </div>
+                    <div class="col ms-5">
+                        <img src="~/img/registerYourself.jpg" alt="" class="">
+                    </div>
+                </div>
+                <div class="row mb-5 ms-5">
+
+                    <div class="col mt-auto mb-auto ms-5 ps-5">
+                        <img src="~/img/card-img2.png" alt="" class="" style="border-radius: 50%; align-items: center; justify-content: center; height: 260px; width:260px">
+                    </div>
+
+                    <div class="col">
+                        <h3>Get service requests</h3>
+                        <p>You will get service requests from <br>customes depend on service area and profile.</p>
+
+                        <a href="" class="how_to_link">Read more <img src="~/img/rightArrow.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="row ms-5">
+                    <div class="col mt-auto mb-auto ms-5">
+                        <h3 class="ms-5">Complete service</h3>
+                        <p class="ms-5">Accept service requests from your customers <br>and complete your work.</p>
+
+                        <a href="" class="ms-5 how_to_link">Read more <img src="~/img/rightArrow.png" alt=""></a>
+                    </div>
+                    <div class="col text-center">
+                        <img src="~/img/card-img3.png" alt="" class="" style="border-radius:50%;align-items:center;justify-content:center;height:260px;width:260px">
+                    </div>
+                </div>
+            </div>
+            <!-- newsletter starts -->
+            <div class="text-center my-5">
+                <h4 class="mb-3"><b>GET OUR NEWSLETTER</b></h4>
+                <form action="">
+                    <input type="text" name="email" placeholder="YOUR EMAIL" class="rounded-pill px-3"
+                           style="border: 1px solid gray;">
+                    <input type="submit" name="submit" class="rounded-pill border border-0 px-3 mx-2" id=""
+                           style="background-color: #ff7b6d; padding-top: 3px; padding-bottom: 3px;  color: #ffffff;">
+                </form>
+            </div>
+            <!-- newsletter ends -->
+        </section>
+        <!-- how it work ends -->
+        <button type="button" class="btn btn-floating" id="btn-back-to-top" style="z-index: 100;">
+            <i class="fas fa-chevron-circle-up"></i>
+        </button>
+    </main>
+
+
+    <!-- footer starts -->
+    <footer style="background-color: #111111;">
+
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <!-- logo starts -->
+            <div>
+                <img width="100px" src="~/img/white-logo-transparent-background.png" alt="">
+            </div>
+            <!-- logo ends -->
+            <!-- links starts -->
+            <div class="d-flex flex-wrap text-center justify-content-center">
+                <a class="px-3 footer-link" asp-controller="Start" asp-action="Index">HOME</a>
+                <a class="px-3 footer-link" asp-controller="Start" asp-action="About">ABOUT</a>
+                <a class="px-3 footer-link" href="#testimonials">TESTIMONIALS</a>
+                <a class="px-3 footer-link" asp-controller="Start" asp-action="Faq">FAQS</a>
+                <a class="px-3 footer-link" href="#">INSURRANCE POLICY</a>
+                <a class="px-3 footer-link" href="#">IMPRESSUM</a>
+            </div>
+            <!-- links ends -->
+            <!-- fb insta starts -->
+            <div>
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+
+                <a class="px-2" href="#"><i style="color: white;" class="fab fa-instagram"></i></a>
+            </div>
+            <!-- fb insta ends -->
+        </div>
+
+        <!-- privacy policy starts -->
+        <div class="text-center mb-0 py-2" style="position:relative; color:white; background-color: black">
+            <p class="mb-0 py-2 d-inline">
+                ©2018 Helperland. All rights reserved. Terms and Conditions | Privacy Policy
+            </p>
+        </div>
+        <!-- privacy policy ends -->
+
+    </footer>
+    <!-- footer ends -->
+    <!-- scripts -->
+    <script>
+
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

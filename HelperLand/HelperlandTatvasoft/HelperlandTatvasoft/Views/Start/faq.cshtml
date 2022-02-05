@@ -5,6 +5,8 @@
     Layout = null;
 }
 
+@using Microsoft.AspNetCore.Http;
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,49 +38,93 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
-                <img src="~/img/white-logo-transparent-background.png" alt=""
-                     class="main-logo ms-2" width="73px" height="54px">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
 
-                <i class="fas fa-bars"></i>
-            </button>
+    @if (Context.Session.GetString("username") != null)
+    {
+        <header class="header">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" asp-controller="Start" asp-action="Index">
+                    <img src="~/img/white-logo-transparent-background.png" alt=""
+                         class="main-logo ms-2" width="73px" height="54px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-2">
-                    <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
-                           style="background-color: #29626D;">Book now</span></a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Prices and services</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Warranty</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
-                           style="background-color: #29626D;" asp-controller="Start" asp-action="Index">Login</a>
-                    </li>
-                    <li class="nav-item px-3">
-                        <a class="nav-link border border-1 rounded-pill px-3" href="#"
-                           style="background-color: #29626D;">Become a helper</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2">
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                               style="background-color: #29626D;">Book now</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" asp-controller="Start" asp-action="Prices">Prices and services</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Warranty</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    }
+    else
+    {
+        <header class="header">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="~/img/white-logo-transparent-background.png" alt=""
+                         class="main-logo ms-2" width="73px" height="54px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2">
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3" href="#"
+                               style="background-color: #29626D;">Book now</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" asp-controller="Start" asp-action="Prices">Prices and services</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Warranty</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link" asp-controller="Start" asp-action="Contact">Contact</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3"
+                               style="background-color: #29626D;" asp-controller="Start" asp-action="Index">Login</a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link border border-1 rounded-pill px-3" asp-controller="Start" asp-action="BecomeAHelper"
+                               style="background-color: #29626D;">Become a helper</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    }
+
+
 
     <!-- Login pop-up -->
 
